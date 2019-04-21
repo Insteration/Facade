@@ -8,11 +8,26 @@
 
 import UIKit
 
+// обработка ошибок
+
+enum ImageSaverError: Error {
+    case couldNotCreateDestinationPath
+    case couldNotCreateJPEGDataFromImage
+    case couldNotCreatePNGDataFromImage
+    case couldNotSaveImageDestinationPath
+}
+
+enum ImageType {
+    case png
+    case jpeg(compressionQuality: CGFloat)
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
 
 
